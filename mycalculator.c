@@ -45,13 +45,13 @@ int main() {
 	char op;
 	
 	printf("toplama => +\n");
-    printf("cikarma => -\n");
-    printf("carpma => * \n");
-    printf("bolme => / \n");
-    printf("modul alma => ?\n");
-    printf("faktoriyel => !\n");
-    printf("10 tabaninda logaritma => 1\n");
-    printf("e tabaninda logaritma => 2\n");
+        printf("cikarma => -\n");
+        printf("carpma => * \n");
+        printf("bolme => / \n");
+        printf("modul alma => ?\n");
+        printf("faktoriyel => !\n");
+        printf("10 tabaninda logaritma => 1\n");
+        printf("e tabaninda logaritma => 2\n");
 	printf("karekok alma => 3\n");
 	printf("mutlak deger alma => 4\n");
 	printf("yuzde alma => y\n");
