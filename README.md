@@ -37,3 +37,4 @@ It is a calculator that is has many operations. These are as follows:
 - Find lowest common multiple of the given two numbers
 - Check if the given number is perfect number
 
+There may be some mistakes. If you recognize, please share it me.
