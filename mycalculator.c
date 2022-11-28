@@ -48,6 +48,7 @@ int main() {
         printf("cikarma => -\n");
         printf("carpma => * \n");
         printf("bolme => / \n");
+	printf("us alma => ^\n");
         printf("modul alma => ?\n");
         printf("faktoriyel => !\n");
         printf("10 tabaninda logaritma => 1\n");
@@ -80,7 +81,7 @@ int main() {
 	printf("ekok alma =>n\n");
 	printf("mukemmel sayi =>x\n");
 	
-	printf("\nhesap makinesine hosgeldiniz.lutfen yukaridan bir islem seciniz:");
+	printf("\nhesap makinesine hosgeldiniz.lutfen yukaridan bir islem seciniz: ");
 	scanf("%c",&op);
 	
 	
