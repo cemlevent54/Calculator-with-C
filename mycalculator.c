@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<math.h>
-#include<conio.h>
 #include<stdlib.h>
 
 void addition();
@@ -44,46 +43,46 @@ int main() {
 	
 	char op;
 	
-	printf("toplama => +\n");
-        printf("cikarma => -\n");
-        printf("carpma => * \n");
-        printf("bolme => / \n");
-	printf("us alma => ^\n");
-        printf("modul alma => ?\n");
-        printf("faktoriyel => !\n");
-        printf("10 tabaninda logaritma => 1\n");
-        printf("e tabaninda logaritma => 2\n");
-	printf("karekok alma => 3\n");
-	printf("mutlak deger alma => 4\n");
-	printf("yuzde alma => y\n");
-	printf("sinus alma => s\n");
-	printf("cos alma => c\n");
-	printf("tan alma => t\n");
-	printf("arcsin => a\n");
-	printf("arccos => b\n");
-	printf("arctan => d\n");
-	printf("sayinin tersini alma => 5\n");
-	printf("asagi yuvarlama => 6\n");
-	printf("yukari yuvarlama => 7\n");
-	printf("kup kok alma => k\n");
-	printf("hipotenus => h\n");
-	printf("gauss toplami => g\n");
-	printf("asal sayi => p\n");
-	printf("sicaklik donusumu =>e\n");
+	printf("addition => +\n");
+    printf("substraction => -\n");
+    printf("multipication => * \n");
+    printf("division => / \n");
+	printf("power => ^\n");
+    printf("modul => ?\n");
+    printf("factorial => !\n");
+    printf("logarithm base 10 => 1\n");
+    printf("logarithm base e => 2\n");
+	printf("square root => 3\n");
+	printf("absolute => 4\n");
+	printf("percentage => y\n");
+	printf("sinus => s\n");
+	printf("cosinus => c\n");
+	printf("tanjant => t\n");
+	printf("arcsinus => a\n");
+	printf("arccosinus => b\n");
+	printf("arctanjant => d\n");
+	printf("reverse number => 5\n");
+	printf("floor => 6\n");
+	printf("ceiling => 7\n");
+	printf("cubic root => k\n");
+	printf("hypotenus => h\n");
+	printf("gauss summation => g\n");
+	printf("prime number => p\n");
+	printf("convert degree to fahrenheit =>e\n");
 	printf("ax^2+bx+c=0 => f\n");
-	printf("armstrong numarasi => 8\n");
+	printf("armstrong number => 8\n");
 	printf("decimal to binary => o\n");
 	printf("binary to decimal => i\n");
-	printf("fibonacci dizisi => 9\n");
-	printf("palindrom sayi => 0\n");
-	printf("artik yil => l\n");
-	printf("ebob alma => m\n");
-	printf("ekok alma =>n\n");
-	printf("mukemmel sayi =>x\n");
+	printf("fibonacci sequence => 9\n");
+	printf("palindrom number => 0\n");
+	printf("leap year => l\n");
+	printf("greatest common divisior => m\n");
+	printf("lowest common multiple =>n\n");
+	printf("perfect number =>x\n");
 	
-	printf("\nhesap makinesine hosgeldiniz.lutfen yukaridan bir islem seciniz: ");
+	printf("\nwelcome to calculator.choose an opeator: ");
 	scanf("%c",&op);
-	
+
 	
 	switch (op) {
 		case '+': addition();
@@ -168,9 +167,9 @@ void addition() {
 	float a;
 	float b;
 	float sum;
-	printf("ilk numara: ");
+	printf("first num: ");
 	scanf("%f",&a);
-	printf("ikinci numara: ");
+	printf("second num: ");
 	scanf("%f",&b);
 	sum = a + b;
 	printf("%.2f + %.2f = %.2f",a,b,sum);
@@ -182,9 +181,9 @@ void substraction() {
 	float a, b;
 	float c = 0;
 	
-	printf("ilk numara: ");
+	printf("first num: ");
 	scanf("%f",&a);
-	printf("ikinci numara: ");
+	printf("second num: ");
 	scanf("%f",&b);
 	
 	c = a - b;
@@ -198,9 +197,9 @@ void multipication() {
 	float a;
 	float b;
 	float result;
-	printf("ilk numara: ");
+	printf("first num: ");
 	scanf("%f",&a);
-	printf("ikinci numara: ");
+	printf("second num: ");
 	scanf("%f",&b);
 	result = a * b;
 	printf("%.3f * %.3f = %.3f",a,b,result);
@@ -213,9 +212,9 @@ void division() {
 	float a,b;
 	float c = 0;
 	
-	printf("ilk numarayi giriniz: ");
+	printf("first num: ");
 	scanf("%f",&a);
-	printf("ikinci numarayi giriniz: ");
+	printf("second num: ");
 	scanf("%f",&b);
 	
 	c = a / b;
@@ -228,9 +227,9 @@ void power() {
 	float base,exp;
 	float result ;
 	
-	printf("taban degerini giriniz: ");
+	printf("base: ");
 	scanf("%f",&base);
-	printf("kuvvet degerini giriniz: ");
+	printf("exponent: ");
 	scanf("%f",&exp);
 	
 	result = pow(base,exp);
@@ -243,9 +242,9 @@ void modul() {
 	int a,b;
 	int result = 0;
 	
-	printf("ilk numarayi giriniz: ");
+	printf("first num: ");
 	scanf("%d",&a);
-	printf("ikinci numarayi giriniz: ");
+	printf("second num: ");
 	scanf("%d",&b);
 	
 	result = a % b;
@@ -260,7 +259,7 @@ unsigned long long int factorial() {
 	unsigned long long int result = 1;
 	int  number;
 	
-	printf("faktoriyel almak istediginiz numarayi giriniz: ");
+	printf("num: ");
 	scanf("%d",&number);
 
 	if(number < 0) {
@@ -273,7 +272,7 @@ unsigned long long int factorial() {
 		result *= i;
 	}
 	
-	printf("%d nin faktoriyeli: %llu",number,result);
+	printf("%d! = %llu",number,result);
 
 	}
 	
@@ -283,7 +282,7 @@ void logarithm10() {
 	float a;
 	float result ;
 	
-	printf("log10(x) icin x degeri giriniz:  ");
+	printf("log10(x):  ");
 	scanf("%f",&a);
 	
 	result = log10(a);
@@ -296,7 +295,7 @@ void logarithme() {
 	int a;
 	float result;
 	
-	printf("loge(x) icin x degeri giriniz:  ");
+	printf("loge(x):  ");
 	scanf("%d",&a);
 	
 	result = log(a);
@@ -308,7 +307,7 @@ void squareroot() {
 	float a;
 	float result;
 	
-	printf("karekoku alinacak sayiyi giriniz: ");
+	printf("num: ");
 	scanf("%f",&a);
 	
 	result = sqrt(a);
@@ -320,7 +319,7 @@ void absolute() {
 	float a;
 	float result;
 	
-	printf("mutlak degeri alinacak sayiyi giriniz: ");
+	printf("num: ");
 	scanf("%f",&a);
 	
 	result = fabs(a);
@@ -332,119 +331,118 @@ void percentage() {
 	float a,b;
 	float result;
 	
-	printf("yuzdesi alinacak sayiyi giriniz: ");
+	printf("num: ");
 	scanf("%f",&a);
-	printf("yuzde kacı alinacagini giriniz: ");
+	printf("percentage: ");
 	scanf("%f",&b);
 	
 	result = a * (b/100);
 	
-	printf("%f sayisininin yuzde %f si %.2f dir.",a,b,result);
+	printf("%f percentage %f = %f",a,b,result);
 
 }
 
 void sinus() {
 	
 	const double PI = 3.14159265;
-	float aci;
-	float radyan;
+	float angle;
+	float radian;
 	float result;
 	
+	printf("angle: ");
+	scanf("%f",&angle);
 	
-	printf("acinin derecesini giriniz: ");
-	scanf("%f",&aci);
+	radian = angle * PI / 180;
+	result = sin(radian);
 	
-	radyan = aci * PI / 180;
-	result = sin(radyan);
-	
-	printf("%.2f derece (%.4f radyan) acinin sinus degeri: %.8f",aci,radyan,result);
+	printf("%.2f degree (%.4f radian) sinus value: %.8f",angle,radian,result);
 }
 
 void cosinus() {
 	const double PI = 3.14159265;
-	float aci;
-	float radyan;
+	float angle;
+	float radian;
 	float result;
 	
-	printf("acinin derecesini giriniz: ");
-	scanf("%f",&aci);
+	printf("angle: ");
+	scanf("%f",&angle);
 	
-	radyan = aci * PI / 180;
-	result = cos(radyan);
+	radian = angle * PI / 180;
+	result = cos(radian);
 	
-	printf("%.2f derece (%.4f radyan) acinin cosinus degeri: %.8f",aci,radyan,result);
+	printf("%.2f degree (%.4f radian) cosinus value: %.8f",angle,radian,result);
 }
 
 void tanjant() {
 	const double PI = 3.14159265;
-	float aci;
-	float radyan;
+	float angle;
+	float radian;
 	float result;
 	
-	printf("acinin derecesini giriniz: ");
-	scanf("%f",&aci);
+	printf("angle: ");
+	scanf("%f",&angle);
 	
-	radyan = aci * PI / 180;
-	result = tan(radyan);
+	radian = angle * PI / 180;
+	result = tan(radian);
 	
-	printf("%.2f derece (%.4f radyan) acinin tanjant degeri: %.8f",aci,radyan,result);
+	printf("%.2f degree (%.4f radian) tanjant value: %.8f",angle,radian,result);
 }
 
 void arcsin() {
 	const double PI = 3.14159265;
-	float deger;
-	float radyan;
-	float derece;
+	float value;
+	float radian;
+	float degree;
 	
-	printf("sinus degeri giriniz: ");
-	scanf("%f",&deger);
+	printf("sinus value: ");
+	scanf("%f",&value);
 	
-	radyan = asin(deger);
-	derece = radyan * 180 / PI;
+	radian = asin(value);
+	degree = radian * 180 / PI;
 	
-	printf("sinus degeri %.4f olan aci: radyan: %.4f derece: %.2f",deger,radyan,derece);
+	printf("the angle that sinus value is %.4f : radian: %.4f derece: %.2f",value,radian,degree);
 }
 
 void arccos() {
 	const double PI = 3.14159265;
-	float deger;
-	float radyan;
-	float derece;
+	float value;
+	float radian;
+	float degree;
 	
-	printf("cosinus degeri giriniz(-1 ve 1 aralıgında): ");
-	scanf("%f",&deger);
+	printf("cosinus value: ");
+	scanf("%f",&value);
 	
-	radyan = acos(deger);
-	derece = radyan * 180 / PI;
+	radian = acos(value);
+	degree = radian * 180 / PI;
 	
-	printf("cosinus degeri %.4f olan aci: radyan: %.4f derece: %.2f",deger,radyan,derece);
+	printf("the angle that sinus value is %.4f : radian: %.4f degree: %.2f",value,radian,degree);
 }
 
 void arctan() {
 	const double PI = 3.14159265;
-	float deger;
-	float radyan;
-	float derece;
+	float value;
+	float radian;
+	float degree;
 	
-	printf("tanjant degeri giriniz(-1 ve 1 aralıgında): ");
-	scanf("%f",&deger);
+	printf("tanjant value: ");
+	scanf("%f",&value);
 	
-	radyan = atan(deger);
-	derece = radyan * 180 / PI;
+	radian = atan(value);
+	degree = radian * 180 / PI;
 	
-	printf("tanjant degeri %.4f olan aci: radyan: %.4f derece: %.2f",deger,radyan,derece);
+	printf("the angle that sinus value is %.4f : radian: %.4f derece: %.2f",value,radian,degree);
 }
 
 void reversingnumber() {
 	float a;
 	float result;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%f",&a);
 	
 	result = 1 / a;
 	
-	printf("%f sayisinin tersi: %f",a,result);
+	printf("reverse of %f: %f",a,result);
 	
 }
 
@@ -452,50 +450,50 @@ void asagiyuv() {
 	float a;
 	float result;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%f",&a);
 	
 	result = floor(a);
 	
-	printf("%f sayisini asagi yuvarla: %f",a,result);
+	printf("floor %f: %f",a,result);
 }
 
 void yukariyuv() {
 	float a;
 	float result;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%f", &a);
 	
 	result = ceil(a);
 	
-	printf("%f sayisini yukari yuvarla: %f",a,result);
+	printf("ceil %f: %f",a,result);
 }
 
 void cubicroot() {
 	float a;
 	float result;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%f",&a);
 	
 	result = cbrt(a);
 	
-	printf("%f sayisinin kupkoku: %f",a,result);
+	printf("cubic root %f: %f",a,result);
 }
 
 void hypotenus() {
 	float a,b;
 	float result;
 	
-	printf("1. kenari giriniz: ");
+	printf("1. edge: ");
 	scanf("%f",&a);
-	printf("2. kenari giriniz: ");
+	printf("2. edge: ");
 	scanf("%f",&b);
 	
 	result = hypot(a,b);
 	
-	printf("1. kenari %f, 2. kenarı %f olan ucgenin hipotenus degeri: %f",a,b,result);
+	printf("hypotenus value: %f",result);
 }
 
 void gauss(){
@@ -504,12 +502,12 @@ void gauss(){
 	int sum;
 	int result;
 	
-	printf("son numarayi giriniz: ");
+	printf("number: ");
 	scanf("%d",&number);
 	
 	result = ((number) * (number + 1)) / 2;
 	
-	printf("ilk elemani 0, son elemani %d olan sayi dizisinin gauss toplami: %d",number,result);
+	printf("gauss sumation: %d",result);
 }
 
 void prime() {
@@ -517,7 +515,7 @@ void prime() {
 	int number;
 	int count = 0;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%d",&number);
 	
 	for (i= 2; i < number;i++) {
@@ -527,11 +525,11 @@ void prime() {
 	}
 	
 	if (count > 0) {
-		printf("%d sayisi asal sayi degildir",number);
+		printf("%d is not prime",number);
 		
 	}
 	else {
-		printf("%d sayisi asal sayidir",number);
+		printf("%d is prime",number);
 	}
 }
 
@@ -539,35 +537,35 @@ void temperature() {
 	float derece;
 	float fahrenheit;
 	
-	printf("dereceyi giriniz: ");
+	printf("degree: ");
 	scanf("%f",&derece);
 	
 	fahrenheit = (derece*1.8) + 32;
 	
-	printf("%f derece = %f fahrenheit",derece,fahrenheit);
+	printf("%f degree = %f fahrenheit",derece,fahrenheit);
 	
 }
 
 void denklem() {
 	double a,b,c,delta,x1,x2,realpart,imaginarypart;
 	
-	printf("ax2+bx+c=0 denklemi icin a,b,c degerlerini giriniz: ");
+	printf("a,b,c value for ax2+bx+c=0: ");
 	scanf("%lf %lf %lf",&a, &b, &c);
 	delta = b * b - 4 * a * c;
 	                                          
     if (delta > 0) {
     	x1 = (-b + sqrt(delta)) /2 * a;
     	x2 = (-b - sqrt(delta)) /2 * a;
-    	printf("(%.1f)x^2+(%.1f)x+(%.1f)=0 denkleminin 1. koku = %.2f, 2. koku = %.2f",a,b,c,x1,x2);
+    	printf("(%.1f)x^2+(%.1f)x+(%.1f)=0  1. root = %.2f, 2. root = %.2f",a,b,c,x1,x2);
 	}
 	else if (delta < 0) {
 		realpart = (-b) / 2 * a;
 		imaginarypart = sqrt(-delta) / 2 * a;
-		printf("(%.1f)x^2+(%.1f)x+(%.1f)=0 denkleminin 1. koku = %.2lf + %.2lfi, 2. koku = %.2lf - %.2lfi",a,b,c,realpart,imaginarypart,realpart,imaginarypart);
+		printf("(%.1f)x^2+(%.1f)x+(%.1f)=0  1. root = %.2lf + %.2lfi, 2. root = %.2lf - %.2lfi",a,b,c,realpart,imaginarypart,realpart,imaginarypart);
 	}
 	else {
 		x1 = x2 = (-b) / 2 * a;
-		printf("(%.1f)x^2+(%.1f)x+(%.1f)=0 denkleminin kokleri esit ve %.2f degerindedir.",a,b,c,x1);
+		printf("(%.1f)x^2+(%.1f)x+(%.1f)=0 equal root and %.2f value",a,b,c,x1);
 	}
 }
 
@@ -575,7 +573,7 @@ void armstrongnumber() {
 	int num, originalnum, remainder, n = 0;
 	float result = 0.0;
 	
-	printf("numara giriniz: ");
+	printf("number: ");
 	scanf("%d",&num);
 	
 	originalnum = num;
@@ -592,10 +590,10 @@ void armstrongnumber() {
 	}
 	
 	if ((int)result == originalnum) {
-		printf("%d bir armstrong numarasidir.",originalnum);
+		printf("%d is armstrong number.",originalnum);
 	}
 	else {
-		printf("%d bir armstrong numarasi degildir.",originalnum);
+		printf("%d is not armstrong number.",originalnum);
 	}
 }
 
@@ -605,7 +603,7 @@ void decimaltobinary() {
 	int i= 1,rem;
 	long long bin = 0;
 	
-	printf("decimal sisteminden sayi giriniz: ");
+	printf("decimal number: ");
 	scanf("%d",&num);
 	
 	n = num; 
@@ -617,14 +615,14 @@ void decimaltobinary() {
 		i *= 10;
 	}
 	
-	printf("%d sayisinin binary sistemdeki karsiligi = %d",n,bin);
+	printf("decimal %d = binary %d",n,bin);
 }
 
 void binarytodecimal() {
 	int dec = 0, i = 0, rem; 
 	int num, n;
 	
-	printf("binary sisteminden numara giriniz (1 ve 0): ");
+	printf("binary number: ");
 	scanf("%d",&num);
 	
 	n = num;
@@ -636,31 +634,30 @@ void binarytodecimal() {
 		i++;
 	}
 	
-	printf("%d binary sayisinin decimal sistemdeki karsiligi= %d",n,dec);
+	printf("binary %d= decimal %d",n,dec);
 }
 
 void fibonaccisequence() {
 	
 	int limit, a = 0, b = 1,c;
 	
-	printf("fibonacci dizisindeki terim sayisini giriniz: ");
+	printf("term number for fibonacci sequence: ");
 	scanf("%d",&limit);
 
     printf("%d\n%d\n",a,b);
-	
-	for (int i=1; i<=limit-2;i++) {
+	int i;
+	for (i=1; i<=limit-2;i++) {
         c = a + b;
 		printf("%d\n",c);
         a = b;
         b = c;
-		
 	}
 }
 
 void palindrome() {
 	int n, reversed = 0, remainder, original;
 	
-	printf("bir sayi giriniz: ");
+	printf("number: ");
 	scanf("%d",&n);
 	
 	original = n;
@@ -671,10 +668,10 @@ void palindrome() {
 		n /= 10;
 	}
 	if (original == reversed) {
-		printf("%d sayisi bir palindrom sayidir.",original);
+		printf("%d is palinrome number.",original);
 	}
 	else {
-		printf("%d sayisi bir palindrom sayi degildir.",original);
+		printf("%d is not palindrome number.",original);
 	}
 	
 }
@@ -683,24 +680,24 @@ void leapyear() {
 	
 	int yil;
 	
-	printf("yil giriniz: ");
+	printf("year value: ");
 	scanf("%d",&yil);
 	
 	if ((yil % 4 == 0) && (yil % 100 != 0)) {
-		printf("%d yili artik yildir",yil);
+		printf("%d year is leap year",yil);
 	}
 	else if (yil % 400 == 0) {
-		printf("%d yili artik yildir",yil);
+		printf("%d year is leap year",yil);
 	}
 	else {
-		printf("%d yili artik yil degildir",yil);
+		printf("%d year is not leap year",yil);
 	}
 }
 
 void greatestcommondivisior() {
 	int n1,n2,i,gcd;
 	
-	printf("ebobu alinacak sayilari giriniz: ");
+	printf("two number: ");
 	scanf("%d %d",&n1,&n2);
 	
 	for (i = 1; i <= n1 && i <= n2; i++) {
@@ -708,21 +705,21 @@ void greatestcommondivisior() {
 			gcd = i;
 		}
 	}
-	printf("ebob(%d,%d)=%d",n1,n2,gcd);
+	printf("gcd(%d,%d)=%d",n1,n2,gcd);
 }
 
 void lowestcommonmultiple() {
 	int n1,n2,i;
 	int max;
 	
-	printf("ekokunu istediginiz iki sayiyi giriniz: ");
+	printf("two number: ");
 	scanf("%d %d",&n1,&n2);
 	
 	max = (n1 > n2) ? n1 : n2;
 	
 	while(1) {
 		if (max % n1 == 0 && max % n2 == 0) {
-			printf("ekok(%d,%d) = %d ",n1,n2,max);
+			printf("lcm(%d,%d) = %d ",n1,n2,max);
 		    break;
 		}
 		max++;
@@ -733,20 +730,20 @@ void perfectnumber() {
 	int number,n;
 	int sum = 0;
 	
-	printf("sayi giriniz: ");
+	printf("number: ");
 	scanf("%d",&n);
 	number = n;
-	
-	for (int j = 1; j < n; j++) {
+	int j;
+	for (j = 1; j < n; j++) {
 		if (n%j == 0) {
 			sum = sum + j;
 		}
 	}
 	
 	if (sum == number) {
-		printf("%d bir mukemmel sayidir.",number);
+		printf("%d is perfect number.",number);
 	}
 	else {
-		printf("%d bir mukemmel sayi degildir.",number);
+		printf("%d is not perfect number.",number);
 	}
 }
